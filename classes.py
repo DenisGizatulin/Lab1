@@ -23,7 +23,7 @@ class Vehicle:
     @capacity.setter
     def capacity(self, capacity) -> None:
         if not isinstance(capacity, int):
-            raise ValueError("")
+            raise ValueError("The capacity must be a positive number")
         self._capacity = capacity
 
 class Car(Vehicle):
