@@ -3,29 +3,6 @@ class Vehicle:
         self.name = name
         self.capacity = capacity
 
-    def info(self) -> None:
-        print(f"Name: {self._name}, Capacity: {self._capacity} лет")
-
-    @property
-    def name(self) -> str:
-        return self._name
-
-    @name.setter
-    def name(self, name) -> None:
-        if not isinstance(name, str):
-            raise ValueError("Name have to be string type")
-        self._name = name
-
-    @property
-    def capacity(self) -> int:
-        return self._capacity
-
-    @capacity.setter
-    def capacity(self, capacity) -> None:
-        if not isinstance(capacity, int):
-            raise ValueError("The capacity must be a positive number")
-        self._capacity = capacity
-
 class Car(Vehicle):
     def __init__(self, name, capacity, fuel_type):
         super().__init__(name, capacity)
